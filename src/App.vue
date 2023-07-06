@@ -32,13 +32,27 @@
 
 
 <div><router-link to="/list">리스트페이지</router-link> </div>
-<router-view :블로그글="블로그글"></router-view>
+
+<div class="mt-4">
+
+  <router-view :블로그글="블로그글"></router-view>
+
+
+</div>
 
 <!-- <List :블로그글="블로그글"/> -->
 
 </template>
 
 <script>
+//7월6일 숙제 (시도했는데) 못함 라우터 연결이 헷갈림 
+//1. 일단 Detail 파일 만듦 2.Detail 페이지 이름 두단어로 설정 !! 3. 라우터 경로 설정 
+//4. /detail/0 /detail/1/ detail/2 이런식으로 되게 (component에서 클릭하는 식이 아니었음) 5.router.js가서 /detail/:작명(일단id로함)
+//라우터 변수 => 유저가 접속한 숫자 => $route.params.id 
+//router.js 에서 { path: "/detail/:id(\\d+(정규식이용가능))",component: Detail,},
+//라우터 순서 유의해야함 위쪽 부터 검색함 
+
+
 //7월5일-2 vue-router 설치와 기본 라우팅
 //라우터 세팅 =>main.js로 가야함  =>이런식으로 createApp(App).use(라우터만든거).mount('#app')
 //router.js 에서도 import하고 import List from './List.vue'; path: "/list", component: List.vue,
