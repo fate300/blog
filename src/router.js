@@ -2,11 +2,23 @@ import { createWebHistory, createRouter } from "vue-router";
 import List from './List.vue';
 import Home from './Home.vue';
 import Detail from './Detail.vue';
+import Author from './Author.vue';
+import Comment from './Comment.vue';
 
 const routes = [
-  { path: "/detail/:id",
-  component: Detail,
-
+  {
+    path: "/detail/:id",
+    component: Detail,
+    children: [
+      {
+        path: "author",
+        component: Author,
+      },
+      {
+        path: "comment",
+        component: Comment,
+      },
+    ]
   },
   {
     path: "/list",
@@ -15,7 +27,7 @@ const routes = [
   {
     path: "/",
     component: Home,
-  }
+  },
 ];
 
 const router = createRouter({
@@ -23,4 +35,4 @@ const router = createRouter({
   routes,
 });
 
-export default router; 
+export default router;

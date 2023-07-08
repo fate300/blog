@@ -45,6 +45,15 @@
 </template>
 
 <script>
+//7월8일 심심할까봐 소개하는 Nested routes & push 함수
+//숨겨놨다가 보여주는 방식 (컴포넌트 숨겨놨다가 보여주는 방식)
+// children: [{ path: "/author", component: Author,}, { path: "/comment", component: Comment,},]
+// 자식(Children)라우터에 경로는 path:"author"(슬래쉬 없이)
+//클릭하면 바로 라우터 띄어줌  <h5 @click="$router.push('/detail/0')">{{ 블로그글[0].title}}</h5>
+//route는 url경로를 알려주는 변수 VS router는 페이지 이동관련 기능 
+//페이지 이동 => router.go(-1)한페이지 뒤로 
+//vue Router 검색해석 필요한 기능 찾기
+
 //7월6일 숙제 (시도했는데) 못함 라우터 연결이 헷갈림 
 //1. 일단 Detail 파일 만듦 2.Detail 페이지 이름 두단어로 설정 !! 3. 라우터 경로 설정 
 //4. /detail/0 /detail/1/ detail/2 이런식으로 되게 (component에서 클릭하는 식이 아니었음) 5.router.js가서 /detail/:작명(일단id로함)
